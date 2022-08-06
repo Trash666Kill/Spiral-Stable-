@@ -121,7 +121,6 @@ echo "**CLEANING UP**"
 apt autoremove -y
 rm /home/emperor/.bash_history
 rm /root/.bash_history
-rm -r /root/.ssh
 
 #DUC
 #echo "**Dynamic DNS Updater**"
