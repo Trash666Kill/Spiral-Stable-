@@ -41,6 +41,8 @@ systemctl disable libvirtd
 echo "**CREATING DIRECTORIES**"
 mkdir -p /etc/scripts/interfaces
 mkdir /etc/scripts/mount
+mkdir /var/log/rc.local
+chown emperor:emperor -R /var/log/rc.local
 mkdir /mnt/Temp
 mkdir -p /mnt/Local/USB/A
 mkdir /mnt/Local/USB/B
