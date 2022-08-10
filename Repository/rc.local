@@ -1,3 +1,4 @@
 #!/bin/sh
+#/etc/scripts/interfaces/zombie0.sh &
 #(sleep 20
-/etc/scripts/interfaces/zombie0.sh) &
+/etc/scripts/mount/mount.sh) &
