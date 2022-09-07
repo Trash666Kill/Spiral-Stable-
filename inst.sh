@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    	exit 1
 else
 #Non-free repo
-cd /Spiral/Repository/
+cd /Spiral-main/Repository/
 echo "**ADDING NON-FREE REPOSITORIES**"
 rm /etc/apt/sources.list
 cp sources.list /etc/apt/
