@@ -68,6 +68,7 @@ cp -v smb.conf /etc/samba
 rm -v /etc/ssh/sshd_config
 cp -v sshd_config /etc/ssh
 rm -v /etc/motd
+cp -v useful /home/emperor/.useful
 touch /etc/motd
 chmod 700 /home/emperor/.ssh
 touch /home/emperor/.ssh/authorized_keys
