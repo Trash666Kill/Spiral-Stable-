@@ -7,8 +7,8 @@ else
 #Non-free repo
 cd /Spiral-main/Repository/
 echo "**ADDING NON-FREE REPOSITORIES**"
-rm /etc/apt/sources.list
-cp sources.list /etc/apt/
+rm -v /etc/apt/sources.list
+cp -v sources.list /etc/apt/
 #Update and Upgrade
 echo "**UPDATING AND UPGRADING**"
 apt update && apt upgrade -y
@@ -39,35 +39,35 @@ gpasswd libvirt -a emperor
 systemctl disable libvirtd
 #Directories
 echo "**CREATING DIRECTORIES**"
-mkdir -p /etc/scripts/interfaces
-mkdir /etc/scripts/mount
-mkdir /var/log/rc.local
+mkdir -pv /etc/scripts/interfaces
+mkdir -v /etc/scripts/mount
+mkdir -v /var/log/rc.local
 chown emperor:emperor -R /var/log/rc.local
-mkdir /mnt/Temp
-mkdir -p /mnt/Local/USB/A
-mkdir /mnt/Local/USB/B
-mkdir /mnt/Local/Container-A
-mkdir /mnt/Local/Container-B
-mkdir -p /mnt/Remote/Servers
+mkdir -v /mnt/Temp
+mkdir -pv /mnt/Local/USB/A
+mkdir -v /mnt/Local/USB/B
+mkdir -v /mnt/Local/Container-A
+mkdir -v /mnt/Local/Container-B
+mkdir -pv /mnt/Remote/Servers
 chown emperor:emperor -R /mnt
-mkdir /home/emperor/Temp
-mkdir /home/emperor/.ssh
-mkdir /root/.ssh
+mkdir -v /home/emperor/Temp
+mkdir -v /home/emperor/.ssh
+mkdir -v /root/.ssh
 #Conf Base
 echo "**SETTING UP BASE**"
 systemctl disable smbd
 systemctl disable netdata
-cp zombie0.sh /etc/scripts/interfaces
+cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
-cp rc.local /etc
+cp -v rc.local /etc
 chmod 755 /etc/rc.local
-rm /etc/network/interfaces
-cp interfaces /etc/network
-rm /etc/samba/smb.conf
-cp smb.conf /etc/samba
-rm /etc/ssh/sshd_config
-cp sshd_config /etc/ssh
-rm /etc/motd
+rm -v /etc/network/interfaces
+cp -v interfaces /etc/network
+rm -v /etc/samba/smb.conf
+cp -v smb.conf /etc/samba
+rm -v /etc/ssh/sshd_config
+cp -v sshd_config /etc/ssh
+rm -v /etc/motd
 touch /etc/motd
 chmod 700 /home/emperor/.ssh
 touch /home/emperor/.ssh/authorized_keys
@@ -98,20 +98,20 @@ echo "9"
 apt install virt-manager ssh-askpass -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
-rm /usr/share/desktop-base/grub_background.sh
-rm /usr/share/images/desktop-base/desktop-grub.png
-rm /etc/lightdm/lightdm-gtk-greeter.conf
+rm -v /usr/share/desktop-base/grub_background.sh
+rm -v /usr/share/images/desktop-base/desktop-grub.png
+rm -v /etc/lightdm/lightdm-gtk-greeter.conf
 tar -xvf Spiral.tar.xz -C /usr/share/wallpapers/ > /dev/null 2>&1
 tar -xvf 01-Qogir.tar.xz -C /usr/share/icons > /dev/null 2>&1
 tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
-cp lightdm-gtk-greeter.conf /etc/lightdm/
-cp explorer.desktop /usr/share/applications/
-cp /usr/share/wallpapers/Spiral/desktop-grub.png /usr/share/images/desktop-base/
-cp grub_background.sh /usr/share/desktop-base/
-mkdir -p /etc/X11/xorg.conf.d
-# cp 40-libinput.conf /etc/X11/xorg.conf.d/
+cp -v lightdm-gtk-greeter.conf /etc/lightdm/
+cp -v explorer.desktop /usr/share/applications/
+cp -v /usr/share/wallpapers/Spiral/desktop-grub.png /usr/share/images/desktop-base/
+cp -v grub_background.sh /usr/share/desktop-base/
+mkdir -pv /etc/X11/xorg.conf.d
+# cp -v 40-libinput.conf /etc/X11/xorg.conf.d/
 #Emperor
-rm -r /home/emperor/.config
+rm -rv /home/emperor/.config
 tar -xvf home.tar.xz -C /home/emperor/ > /dev/null 2>&1
 chown emperor:emperor -R /home/emperor/
 chown emperor:emperor -R /usr/share/wallpapers/Spiral/
@@ -122,18 +122,18 @@ update-grub
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
-rm /home/emperor/.bash_history
-rm /root/.bash_history
+rm -v /home/emperor/.bash_history
+rm -v /root/.bash_history
 
 #DUC
 #echo "**Dynamic DNS Updater**"
-#cp Repository/noip-duc-linux.tar.gz /usr/local/src
+#cp -v Repository/noip-duc-linux.tar.gz /usr/local/src
 #cd /usr/local/src/
 #tar xf noip-duc-linux.tar.gz
 #cd noip-2.1.9-1/
 #make install
 #
-#cp noip2.service /etc/systemd/system
+#cp -v noip2.service /etc/systemd/system
 #systemctl daemon-reload
 #systemctl enable noip2
 #systemctl disable noip2
