@@ -1,9 +1,5 @@
 #!/bin/bash
 #
-if [[ $EUID -ne 0 ]]; then
-   	echo "This script must be run as sudo"
-   	exit 1
-else
 #Non-free repo
 cd /Spiral-main/Repository/
 echo "**ADDING NON-FREE REPOSITORIES**"
@@ -76,7 +72,7 @@ chmod 600 /home/emperor/.ssh/authorized_keys
 chmod 700 /root/.ssh
 touch /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
-
+/sbin/usermod -aG sudo emperor
 #DE
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
@@ -149,5 +145,6 @@ echo "1 - Manually configure samba users and their respective passwords
 2 - Add the host IP address to netdata at /etc/netdata/netdata.conf
 3 - Adjust network nics according to the environment
 4 - Activate the modules according to your environment"
+su - emperor
 #
 fi
