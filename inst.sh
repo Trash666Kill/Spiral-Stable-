@@ -49,6 +49,7 @@ chown emperor:emperor -R /mnt
 mkdir -v /home/emperor/Temp
 mkdir -v /home/emperor/.ssh
 mkdir -v /root/.ssh
+chown emperor:emperor -R /home/emperor
 #Conf Base
 echo "**SETTING UP BASE**"
 systemctl disable smbd
