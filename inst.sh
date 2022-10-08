@@ -35,6 +35,8 @@ gpasswd libvirt -a emperor
 systemctl disable libvirtd
 touch /etc/modprobe.d/kvm.conf
 echo 'options kvm_intel nested=1' >> /etc/modprobe.d/kvm.conf
+modprobe -r kvm_intel
+modprobe kvm_intel
 #Directories
 echo "**CREATING DIRECTORIES**"
 mkdir -pv /etc/scripts/interfaces
