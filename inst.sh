@@ -33,6 +33,7 @@ echo "**INSTALLING HYPERVISOR**"
 apt install qemu-kvm libvirt0 bridge-utils libvirt-daemon-system -y
 gpasswd libvirt -a emperor
 systemctl disable libvirtd
+systemctl stop libvirtd
 touch /etc/modprobe.d/kvm.conf
 echo 'options kvm_intel nested=1' >> /etc/modprobe.d/kvm.conf
 /sbin/modprobe -r kvm_intel
