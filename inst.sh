@@ -13,7 +13,7 @@ echo "**INSTALLING BASE PACKAGES**"
 echo "1"
 apt install sudo cryptsetup smartmontools vim sshfs systemd-timesyncd xz-utils uuid pigz -y
 echo "2"
-apt install lm-sensors htop iotop stress hdparm x11-xkb-utils -y
+apt install lm-sensors htop iotop stress hdparm x11-xkb-utils bc -y
 echo "3"
 apt install pm-utils acpid gcc make -y
 echo "4"
