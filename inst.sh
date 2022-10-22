@@ -30,7 +30,7 @@ apt install firmware-misc-nonfree firmware-realtek firmware-atheros -y
 #apt install -f -y
 #Hypervisor
 echo "**INSTALLING HYPERVISOR**"
-apt install qemu-kvm libvirt0 bridge-utils libvirt-daemon-system -y
+apt install qemu-kvm libvirt0 bridge-utils libvirt-daemon-system swtpm-tools -y
 gpasswd libvirt -a emperor
 systemctl disable libvirtd
 systemctl stop libvirtd
