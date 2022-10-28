@@ -62,7 +62,7 @@ systemctl disable netdata
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
 cp -v rc.local /etc
-chmod +755 /etc/rc.local
+chmod 755 /etc/rc.local
 rm -v /etc/network/interfaces
 cp -v interfaces /etc/network
 rm -v /etc/samba/smb.conf
@@ -72,12 +72,12 @@ cp -v sshd_config /etc/ssh
 rm -v /etc/motd
 cp -v useful /home/emperor/.useful
 touch /etc/motd
-chmod +700 /home/emperor/.ssh
+chmod 700 /home/emperor/.ssh
 touch /home/emperor/.ssh/authorized_keys
-chmod +600 /home/emperor/.ssh/authorized_keys
-chmod +700 /root/.ssh
+chmod 600 /home/emperor/.ssh/authorized_keys
+chmod 700 /root/.ssh
 touch /root/.ssh/authorized_keys
-chmod +600 /root/.ssh/authorized_keys
+chmod 600 /root/.ssh/authorized_keys
 /sbin/usermod -aG sudo emperor
 #DE
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
