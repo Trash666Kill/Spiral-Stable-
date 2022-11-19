@@ -42,6 +42,7 @@ echo 'options kvm_intel nested=1' >> /etc/modprobe.d/kvm.conf
 echo "**CREATING DIRECTORIES**"
 mkdir -pv /etc/scripts/interfaces
 mkdir -v /etc/scripts/mount
+mkdir -v /etc/scripts/tunnels
 mkdir -v /var/log/rc.local
 chown emperor:emperor -R /var/log/rc.local
 mkdir -v /mnt/Temp
@@ -61,6 +62,9 @@ systemctl disable smbd
 systemctl disable netdata
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
+cp -v cativeiro.sh /etc/scripts/tunnels.sh
+chmod +x /etc/scripts/tunnels.sh
+chmod +x /etc/scripts/
 cp -v rc.local /etc
 chmod 755 /etc/rc.local
 rm -v /etc/network/interfaces
