@@ -43,6 +43,7 @@ echo "**CREATING DIRECTORIES**"
 mkdir -pv /etc/scripts/interfaces
 mkdir -v /etc/scripts/mount
 mkdir -v /etc/scripts/tunnels
+mkdir -v /etc/scripts/routes
 mkdir -v /var/log/rc.local
 chown emperor:emperor -R /var/log/rc.local
 mkdir -v /mnt/Temp
@@ -62,8 +63,8 @@ systemctl disable smbd
 systemctl disable netdata
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
-cp -v cativeiro.sh /etc/scripts/tunnels.sh
-chmod +x /etc/scripts/tunnels.sh
+cp -v cativeiro.sh /etc/scripts/tunnels
+chmod +x /etc/scripts/tunnels/cativeiro.sh
 cp -v enp1s0.sh /etc/scripts/routes
 chmod +x /etc/scripts/routes/enp1s0.sh
 cp -v rc.local /etc
