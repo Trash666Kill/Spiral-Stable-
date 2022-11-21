@@ -64,6 +64,8 @@ cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
 cp -v cativeiro.sh /etc/scripts/tunnels.sh
 chmod +x /etc/scripts/tunnels.sh
+cp -v enp1s0.sh /etc/scripts/routes
+chmod +x /etc/scripts/routes/enp1s0.sh
 cp -v rc.local /etc
 chmod 755 /etc/rc.local
 rm -v /etc/network/interfaces
