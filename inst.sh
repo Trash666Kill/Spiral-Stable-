@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #Non-free repo
-cd /Spiral-main/Repository/
+cd /Spiral/Repository/
 echo "**ADDING NON-FREE REPOSITORIES**"
 rm -v /etc/apt/sources.list
 cp -v sources.list /etc/apt/
