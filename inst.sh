@@ -17,7 +17,7 @@ apt install lm-sensors htop iotop stress hdparm x11-xkb-utils bc fwupd -y
 echo "3"
 apt install pm-utils acpid gcc make -y
 echo "4"
-apt install curl wget samba net-tools tcpdump traceroute nmap telnet iperf ethtool speedtest-cli nload netdata -y
+apt install curl wget samba net-tools tcpdump traceroute nmap telnet iperf ethtool speedtest-cli nload -y
 echo "5"
 apt install f2fs-tools btrfs-progs -y
 #echo "6"
