@@ -8,6 +8,12 @@ $ lsblk
 # cryptsetup luksDump /dev/sda3
 # hdparm -t /dev/sda (benchmark read/write)
 
+FWUPD
+# fwupdmgr get-devices
+# fwupdmgr refresh
+# fwupdmgr get-updates
+# fwupdmgr update
+
 BTRFS and qemu tools
 # btrfsck
 # btrfs check -b --repair /dev/mapper/A_crypt 
