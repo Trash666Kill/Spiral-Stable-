@@ -44,6 +44,7 @@ mkdir -pv /etc/scripts/interfaces
 mkdir -v /etc/scripts/mount
 mkdir -v /etc/scripts/tunnels
 mkdir -v /etc/scripts/routes
+mkdir -v /etc/scripts/others
 mkdir -v /var/log/rc.local
 chown emperor:emperor -R /var/log/rc.local
 mkdir -v /mnt/Temp
