@@ -11,7 +11,7 @@ apt update && apt upgrade -y
 #Base packages*
 echo "**INSTALLING BASE PACKAGES**"
 echo "1"
-apt install sudo cryptsetup smartmontools vim sshfs systemd-timesyncd xz-utils uuid pigz -y
+apt install sudo cryptsetup smartmontools vim sshfs systemd-timesyncd xz-utils uuid pigz sshpass -y
 echo "2"
 apt install lm-sensors htop iotop stress hdparm x11-xkb-utils bc fwupd -y
 echo "3"
