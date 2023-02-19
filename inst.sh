@@ -61,7 +61,6 @@ chown emperor:emperor -R /home/emperor
 #Conf Base
 echo "**SETTING UP BASE**"
 systemctl disable smbd
-systemctl disable netdata
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
 cp -v cativeiro.sh /etc/scripts/tunnels
