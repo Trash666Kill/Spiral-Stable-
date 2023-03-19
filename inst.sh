@@ -19,7 +19,7 @@ apt install pm-utils acpid gcc make -y
 echo "4"
 apt install curl wget samba net-tools tcpdump traceroute nmap telnet iperf ethtool speedtest-cli nload autossh -y
 echo "5"
-apt install btrfs-progs -y
+apt install btrfs-progs ntfs-3g fuse -y
 #echo "6"
 #apt install nvidia-driver firmware-amd-graphics -y
 echo "7"
