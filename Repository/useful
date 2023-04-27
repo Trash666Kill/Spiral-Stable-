@@ -78,6 +78,7 @@ $ testparm
 iPerf
 $ iperf -s
 $ iperf -c server -t20
+$ geoiplookup google.com
 
 Swap
 # swapon --show
