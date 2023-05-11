@@ -135,29 +135,12 @@ apt autoremove -y
 rm -v /home/emperor/.bash_history
 rm -v /root/.bash_history
 
-#DUC
-#echo "**Dynamic DNS Updater**"
-#cp -v Repository/noip-duc-linux.tar.gz /usr/local/src
-#cd /usr/local/src/
-#tar xf noip-duc-linux.tar.gz
-#cd noip-2.1.9-1/
-#make install
-#
-#cp -v noip2.service /etc/systemd/system
-#systemctl daemon-reload
-#systemctl enable noip2
-#systemctl disable noip2
-#systemctl start noip2
-#systemctl status noip2
-#cd /Spiral
-
 #End
-echo "End"
+echo "**End**"
 #Manual settings
-echo "1 - Manually configure samba users and their respective passwords
-2 - Add the host IP address to netdata at /etc/netdata/netdata.conf
-3 - Adjust network nics according to the environment
-4 - Activate the modules according to your environment"
+echo "1 - Adjust network nics according to the environment
+2 - Add zabbix server ip address in /etc/zabbix/zabbix_agentd.conf 
+3 - Manually configure samba users and their respective passwords"
 su - emperor
 #
 fi
