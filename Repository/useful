@@ -84,12 +84,12 @@ $ testparm
 # smbstatus
 # ethtool enp1s0
 # tcpdump -ni enp1s0 udp port 53
-iPerf
 $ iperf -s
 $ iperf -c server -t20
 $ geoiplookup google.com
 # netstat -tulpna or watch netstat -tulpna
 # netstat -an | grep ESTABLISHED | wc -l
+# tcpdump -ni enp1s0 udp port 53
 
 Swap
 # swapon --show
