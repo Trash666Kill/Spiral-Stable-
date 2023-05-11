@@ -32,6 +32,12 @@ or
 # qemu-img check -r all data.qcow
 # qemu-img create -f qcow2 Violet.qcow2 2G
 
+Virsh
+# virsh autostart VM
+# virsh autostart VM --disable
+# virsh domrename <VM> <new-name>
+# virsh undefine VM
+
 Restoring or backing up drives and partitions
 # dd if=/dev/sda of=/dev/sdb bs=4096 status=progress
 # dd if=/dev/sda of=/mnt/Temp/Swamp.img bs=4096 status=progress
@@ -68,6 +74,7 @@ Alternative touchpad configuration
 # mkdir /etc/X11/xorg.conf.d
 # cp /.temp/Update/Others/post_install/40-libinput.conf /etc/X11/xorg.conf.d
 $ xrandr - xrandr -s 6
+# find / -type f -name "king.ovpn"
 
 Network
 $ netstat -tn 2>/dev/null
@@ -79,6 +86,8 @@ iPerf
 $ iperf -s
 $ iperf -c server -t20
 $ geoiplookup google.com
+# netstat -tulpna or watch netstat -tulpna
+# netstat -an | grep ESTABLISHED | wc -l
 
 Swap
 # swapon --show
@@ -104,3 +113,4 @@ Openssh
 $ sshfs -p 28 emperor@192.168.5.11:/mnt/Container-A/ /mnt/Container-A
 $ sshfs -p 28 emperor@192.168.5.11:/mnt/Container-A/ /mnt/Container-A -o allow_other -o ro
 $ ssh -C -X emperor@192.168.5.11
+# ssh -f -N -T -R 2222:localhost:22 -p 4634 emperor@strychnine.duckdns.org &
