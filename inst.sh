@@ -136,7 +136,7 @@ rm -v /home/emperor/.bash_history
 rm -v /root/.bash_history
 
 #End
-echo "**End**"
+echo "**END**"
 #Manual settings
 echo "1 - Adjust network nics according to the environment
 2 - Add zabbix server ip address in /etc/zabbix/zabbix_agentd.conf 
