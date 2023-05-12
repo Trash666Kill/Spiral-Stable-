@@ -77,6 +77,7 @@ Alternative touchpad configuration
 # cp /.temp/Update/Others/post_install/40-libinput.conf /etc/X11/xorg.conf.d
 $ xrandr - xrandr -s 6
 # find / -type f -name "king.ovpn"
+$ tree /mnt/ > file
 
 Network
 $ netstat -tn 2>/dev/null
