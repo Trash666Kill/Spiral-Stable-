@@ -22,7 +22,6 @@ BTRFS and qemu tools
 
 Resize
 # qemu-img resize Music.img +30G *Sempre na ORIGEM
-#
 # cfdisk /dev/vdh
 # btrfs filesystem resize +50G /mnt/VContainers/Music
 or
