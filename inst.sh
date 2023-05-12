@@ -65,8 +65,8 @@ systemctl disable smbd
 systemctl disable zabbix-agent
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
-cp -v cativeiro.sh /etc/scripts/tunnels
-chmod +x /etc/scripts/tunnels/cativeiro.sh
+cp -v strychnine.sh /etc/scripts/tunnels
+chmod +x /etc/scripts/tunnels/strychnine.sh
 cp -v enp1s0.sh /etc/scripts/routes
 chmod +x /etc/scripts/routes/enp1s0.sh
 cp -v rc.local /etc
