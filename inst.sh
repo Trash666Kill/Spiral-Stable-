@@ -13,7 +13,7 @@ echo "**INSTALLING BASE PACKAGES**"
 echo "1"
 apt install sudo cryptsetup smartmontools vim sshfs systemd-timesyncd xz-utils uuid pigz sshpass python3-apt -y
 echo "2"
-apt install lm-sensors htop iotop stress hdparm x11-xkb-utils bc fwupd tree -y
+apt install lm-sensors htop iotop stress hdparm x11-xkb-utils bc fwupd tree zabbix-agent -y
 echo "3"
 apt install pm-utils acpid gcc make -y
 echo "4"
@@ -62,6 +62,7 @@ chown emperor:emperor -R /home/emperor
 #Conf Base
 echo "**SETTING UP BASE**"
 systemctl disable smbd
+systemctl disable zabbix-agent
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
 cp -v cativeiro.sh /etc/scripts/tunnels
