@@ -19,16 +19,18 @@ iface enp1s0 inet dhcp
 #gateway 192.168.4.4
 
 # Bridge static
-#auto venp1s0
-#iface venp1s0 inet static
+#auto benp1s0
+#iface benp1s0 inet static
 #bridge_ports enp1s0
+#bridge_hw enp1s0
 #address 192.168.4.10/24
 #gateway 192.168.4.4
 
 # Bridge DHCP
-#auto venp1s0
-#face venp1s0 inet dhcp
+#auto benp1s0
+#iface benp1s0 inet dhcp
 #bridge_ports enp1s0
+#bridge_hw enp1s0
 #bridge_stp on
 #bridge_fd 0.0
 
