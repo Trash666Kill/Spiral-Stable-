@@ -82,6 +82,7 @@ cp -v useful /home/emperor/.useful
 touch /etc/motd
 chmod 700 /home/emperor/.ssh
 touch /home/emperor/.ssh/authorized_keys
+chown emperor:emperor /home/emperor/.ssh/authorized_keys
 chmod 600 /home/emperor/.ssh/authorized_keys
 chmod 700 /root/.ssh
 touch /root/.ssh/authorized_keys
