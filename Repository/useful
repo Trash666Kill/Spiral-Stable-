@@ -37,6 +37,9 @@ Virsh
 # virsh domrename <VM> <new-name>
 # virsh undefine VM
 
+Ansible
+# ansible-playbook /etc/ansible/playbook/upvms.yml -kK
+
 Restoring or backing up drives and partitions
 # dd if=/dev/sda of=/dev/sdb bs=4096 status=progress
 # dd if=/dev/sda of=/mnt/Temp/Swamp.img bs=4096 status=progress
