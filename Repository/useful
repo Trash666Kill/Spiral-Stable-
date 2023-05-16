@@ -38,7 +38,11 @@ Virsh
 # virsh undefine VM
 
 Ansible
-# ansible-playbook /etc/ansible/playbook/upvms.yml -kK
+$ ansible VMs -k -m ping
+$ ansible VMs -k -m shell -a "uname -a"
+$ ansible VMs -kK -m shell -a "systemctl status zabbix-agent"
+$ ansible-playbook /etc/ansible/playbook/upvms.yml -kK
+* If the ssh keys are properly configured, it is not necessary to use "-k", it is worth noting that, if the command requires superuser elevation, it is necessary to add "-K".
 
 Restoring or backing up drives and partitions
 # dd if=/dev/sda of=/dev/sdb bs=4096 status=progress
