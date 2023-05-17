@@ -25,18 +25,6 @@ apt install btrfs-progs ntfs-3g -y
 #apt install nvidia-driver firmware-amd-graphics -y
 echo "7"
 apt install firmware-misc-nonfree firmware-realtek firmware-atheros -y
-#echo "8"
-{
-(
-set -e
-wget https://github.com/winterheart/broadcom-bt-firmware/releases/latest
-mv latest broadcom.deb
-dpkg -i broadcom.deb && apt install -f -y
-)
-}
-#apt install broadcom-sta-dkms -y
-#dpkg -i broadcom-bt-firmware-10.1.0.1115.deb
-#apt install -f -y
 #Hypervisor
 echo "**INSTALLING HYPERVISOR**"
 apt install qemu-kvm libvirt0 bridge-utils libvirt-daemon-system -y
