@@ -8,6 +8,12 @@ auto lo
 allow-hotplug enp1s0
 iface enp1s0 inet dhcp
 
+# Wireless
+#auto wlan0
+#iface wlan0 inet dhcp
+#wpa-ssid myssid
+#wpa-psk a1b2c3d4e5
+
 # DHCP
 #allow-hotplug enp1s0
 #iface enp1s0 inet dhcp
