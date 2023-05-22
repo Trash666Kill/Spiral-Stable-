@@ -112,6 +112,7 @@ Create encrypted drive or partition
 # cryptsetup luksOpen /dev/disk/by-uuid/898221be-388d-4b20-bfdc-74759afb8dce Container-A_crypt --key-file /root/.crypt/Container-A.key
 
 Zerofill
+# shred -v /dev/sda
 # shred -n 2 -z -v /dev/sda
 
 Stress hardware
