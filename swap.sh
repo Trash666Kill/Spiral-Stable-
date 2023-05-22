@@ -5,7 +5,8 @@ if [[ $EUID -ne 0 ]]; then
    	exit 1
 else
 # swapfile
- echo "*****Adding swapfile to the system*****"
+ echo "##Adding swapfile to the system##"
+ rm -rf /swapfile
  fallocate -l $1 /swapfile
  chmod 600 /swapfile
  mkswap /swapfile
