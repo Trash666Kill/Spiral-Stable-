@@ -105,7 +105,12 @@ Deactivate
 # rm /swapfile
 
 Create encrypted drive or partition
-# cryptsetup -y --cipher aes-xts-plain64 --key-size 512 --hash sha512 luksFormat /dev/sda
+# cryptsetup -y --cipher aes-xts-plain64 --key-size 512 --hash sha512 luksFormat /dev/sda3
+# dd if=/dev/random bs=32 count=1 of=/root/.crypt/Container-A.key
+# chmod 600 /root/.crypt/Container-A.key
+# cryptsetup luksAddKey /dev/sda3 /root/.crypt/Container-A.key
+# cryptsetup luksOpen /dev/sda3 Container-A_crypt --key-file /root/.crypt/Container-A.key
+
 
 Zerofill
 # shred -n 2 -z -v /dev/sda
