@@ -35,4 +35,4 @@ df -hT /dev/mapper/Container-A_crypt
 df -hT /dev/mapper/Container-B_crypt
 df -hT /dev/mapper/Container-C_crypt
 #df -hT /mnt/Remote/Servers/SRV02/Container-A/Virt/Images
-) >> mount-`date +%F`.log
+) 2>&1 | tee mount-`date +%F`.log
