@@ -147,4 +147,4 @@ echo "1 - Adjust network nics according to the environment
 3 - Manually configure samba users and their respective passwords"
 su - emperor
 #
-) 2>&1 | tee outputfile
+) 2>&1 | tee inst.log
