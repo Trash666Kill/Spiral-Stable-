@@ -3,3 +3,5 @@
 #/etc/scripts/interfaces/zombie0.sh &
 #(sleep 20
 #/etc/scripts/mount/mount.sh) &
+#(sleep 30
+#/etc/scripts/tunnels/strychnine.sh) &
