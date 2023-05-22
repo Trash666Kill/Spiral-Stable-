@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 else
 # swapfile
  echo "*****Adding swapfile to the system*****"
- fallocate -l $1G /swapfile
+ fallocate -l $1 /swapfile
  chmod 600 /swapfile
  mkswap /swapfile
  swapon /swapfile
