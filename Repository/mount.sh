@@ -1,4 +1,5 @@
 #!/bin/bash
+(
 # Local
 echo "##Assembling local units##"
 echo "#"
@@ -34,3 +35,4 @@ df -hT /dev/mapper/Container-A_crypt
 df -hT /dev/mapper/Container-B_crypt
 df -hT /dev/mapper/Container-C_crypt
 #df -hT /mnt/Remote/Servers/SRV02/Container-A/Virt/Images
+) 2>&1 | tee mount-`date +%F`.log
