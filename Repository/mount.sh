@@ -23,6 +23,8 @@ mount /dev/mapper/Container-C_crypt /mnt/Local/Container-C
 systemctl restart libvirtd
 #echo "**Samba**"
 systemctl restart smbd
+#echo "**Zabbix**"
+systemctl restart zabbix-agent
 #echo "#"
 #echo "##Starting virtual machines##"
 #echo "VM02"
