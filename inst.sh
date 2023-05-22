@@ -61,6 +61,8 @@ chown emperor:emperor -R /home/emperor
 echo "**SETTING UP BASE**"
 systemctl disable smbd
 systemctl disable zabbix-agent
+cp -v mount.sh /etc/scripts/mount
+chmod +x /etc/scripts/mount/mount.sh
 cp -v zombie0.sh /etc/scripts/interfaces
 chmod +x /etc/scripts/interfaces/zombie0.sh
 cp -v strychnine.sh /etc/scripts/tunnels
