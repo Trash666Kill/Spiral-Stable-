@@ -26,5 +26,4 @@ cryptsetup close Container-A_crypt
 cryptsetup close Container-B_crypt
 cryptsetup close Container-C_crypt
 #echo "**Ejecting units**"
-eject /dev/sdb
-eject /dev/sdc
+udisksctl power-off -b /dev/sdb
