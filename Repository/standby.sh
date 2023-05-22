@@ -19,9 +19,11 @@ sleep 04
 #
 echo "##Putting Storage Drives in Standby Mode##"
 echo "**Dismantling**"
+umount /mnt/Local/Container-A
 umount /mnt/Local/Container-B
 umount /mnt/Local/Container-C
 echo "**Closing LUKS units**"
+cryptsetup close Container-A_crypt
 cryptsetup close Container-B_crypt
 cryptsetup close Container-C_crypt
 echo "**Ejecting units**"
