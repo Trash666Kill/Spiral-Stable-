@@ -1,6 +1,5 @@
 #!/bin/bash
 #
-(
 echo "##STANDBY MODE STARTED##"
 #
 echo "##Shutting down virtual machines##"
@@ -29,4 +28,3 @@ cryptsetup close Container-C_crypt
 echo "**Ejecting units**"
 eject /dev/sdb
 eject /dev/sdc
-) 2>&1 | tee standby-`date +%F`.log
