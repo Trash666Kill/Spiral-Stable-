@@ -22,8 +22,8 @@ umount /mnt/Local/Container-A
 umount /mnt/Local/Container-B
 umount /mnt/Local/Container-C
 #echo "**Closing LUKS units**"
-cryptsetup close Container-A_crypt
-cryptsetup close Container-B_crypt
-cryptsetup close Container-C_crypt
+/usr/sbin/cryptsetup close Container-A_crypt
+/usr/sbin/cryptsetup close Container-B_crypt
+/usr/sbin/cryptsetup close Container-C_crypt
 #echo "**Ejecting units**"
-udisksctl power-off -b /dev/sdb
+/usr/bin/udisksctl power-off -b /dev/sdb
