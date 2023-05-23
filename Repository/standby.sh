@@ -26,4 +26,5 @@ umount /mnt/Local/Container-C
 /usr/sbin/cryptsetup close Container-B_crypt
 /usr/sbin/cryptsetup close Container-C_crypt
 #echo "**Ejecting units**"
-/usr/bin/udisksctl power-off -b /dev/sdb
+/usr/sbin/hdparm -Y /dev/sdb
+#/usr/bin/udisksctl power-off -b /dev/sdb
