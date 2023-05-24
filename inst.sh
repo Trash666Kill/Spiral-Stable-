@@ -150,3 +150,4 @@ echo "1 - Adjust network nics according to the environment
 su - emperor
 #
 ) 2>&1 | tee inst.log
+exit
