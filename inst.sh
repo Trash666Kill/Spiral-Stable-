@@ -1,5 +1,4 @@
 #!/bin/bash
-(
 #
 #Non-free repo
 cd /Spiral/Repository/
@@ -149,5 +148,3 @@ echo "1 - Adjust network nics according to the environment
 3 - Manually configure samba users and their respective passwords"
 su - emperor
 #
-) 2>&1 | tee inst.log
-exit
