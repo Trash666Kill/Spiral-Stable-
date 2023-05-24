@@ -84,6 +84,10 @@ Alternative touchpad configuration
 $ xrandr - xrandr -s 6
 # find / -type f -name "king.ovpn"
 $ tree /mnt/ > file
+$ screen
+$ Ctrl + A + D
+$ screen -list
+$ screen -r 3626 
 
 Network
 $ netstat -tn 2>/dev/null
