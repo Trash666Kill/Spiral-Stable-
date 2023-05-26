@@ -43,6 +43,7 @@ mkdir -v /etc/scripts/routes
 mkdir -v /etc/scripts/others
 mkdir -v /var/log/rc.local
 chown emperor:emperor -R /var/log/rc.local
+mkdir -v /root/.isolation
 mkdir -v /root/.crypt/
 mkdir -v /mnt/Temp
 mkdir -pv /mnt/Local/USB/A
@@ -85,6 +86,7 @@ chmod 700 /home/emperor/.ssh
 su - emperor -c "echo |touch /home/emperor/.ssh/authorized_keys"
 chmod 600 /home/emperor/.ssh/authorized_keys
 su - emperor -c "echo |ssh-keygen -t rsa -b 4096 -N '' <<<$'\n'" > /dev/null 2>&1
+chmod 700 /root/.isolation
 chmod 700 /root/.crypt
 chmod 700 /root/.ssh
 touch /root/.ssh/authorized_keys
