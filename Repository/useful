@@ -8,6 +8,16 @@ $ lsblk
 # cryptsetup luksDump /dev/sda3
 # hdparm -t /dev/sda (benchmark read/write)
 
+ClamAV
+# systemctl stop clamav-freshclam
+# frashclam
+# systemctl restart clamav-freshclam
+# echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > clamav-testfile
+# clamscan -r -i clamav-testfile
+# clamscan --recursive --infected --move=/root/.isolation /home/emperor
+# clamscan --recursive --infected --exclude-dir='^/sys|^/dev' /
+# clamscan --recursive --infected --remove /home/emperor
+
 FWUPD
 # fwupdmgr get-devices
 # fwupdmgr refresh
