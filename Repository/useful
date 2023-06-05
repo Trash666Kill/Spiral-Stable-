@@ -98,6 +98,7 @@ $ screen
 $ Ctrl + A + D
 $ screen -list
 $ screen -r 3626 
+$ ls | wc -l * Count total files in directory.
 
 Network
 $ netstat -tn 2>/dev/null
